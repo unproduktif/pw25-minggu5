@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DieeFashion - Koleksi Pakaian</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">DIEE<span>Fashion</span></a>
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="pakaian.html">Pakaian</a>
+            <a href="celana.html" class="active">Celana</a>
+            <a href="sepatu.html">Sepatu</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+
+    <section class="product-section" id="celana">
+        <h2>Koleksi Celana</h2>
+        
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="../assets/images/celana1.jpg" alt="Celana Kulot" class="product-img">
+                <div class="product-info">
+                    <h3>Celana Kulot</h3>
+                    <div class="product-price">Rp 799.000</div>
+                    <div class="size-options">
+                        <span>Ukuran:</span>
+                        <input type="radio" name="size1" id="size-s-1" value="S">
+                        <label for="size-s-1">S</label>
+                        <input type="radio" name="size1" id="size-m-1" value="M">
+                        <label for="size-m-1">M</label>
+                        <input type="radio" name="size1" id="size-l-1" value="L">
+                        <label for="size-l-1">L</label>
+                        <input type="radio" name="size1" id="size-xl-1" value="XL">
+                        <label for="size-xl-1">XL</label>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart('Celana Kulot', 799000)">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="../assets/images/celana2.jpg" alt="Celana Cargo" class="product-img">
+                <div class="product-info">
+                    <h3>Celana Cargo</h3>
+                    <div class="product-price">Rp 899.000</div>
+                    <div class="size-options">
+                        <span>Ukuran:</span>
+                        <input type="radio" name="size2" id="size-s-2" value="S">
+                        <label for="size-s-2">S</label>
+                        <input type="radio" name="size2" id="size-m-2" value="M">
+                        <label for="size-m-2">M</label>
+                        <input type="radio" name="size2" id="size-l-2" value="L">
+                        <label for="size-l-2">L</label>
+                        <input type="radio" name="size2" id="size-xl-2" value="XL">
+                        <label for="size-xl-2">XL</label>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart('Celana Cargo', 899000)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="../assets/images/celana3.jpg" alt="Celana Cargo" class="product-img">
+                <div class="product-info">
+                    <h3>Celana Cargo</h3>
+                    <div class="product-price">Rp 1.009.000</div>
+                    <div class="size-options">
+                        <span>Ukuran:</span>
+                        <input type="radio" name="size3" id="size-s-3" value="S">
+                        <label for="size-s-3">S</label>
+                        <input type="radio" name="size3" id="size-m-3" value="M">
+                        <label for="size-m-3">M</label>
+                        <input type="radio" name="size3" id="size-l-3" value="L">
+                        <label for="size-l-3">L</label>
+                        <input type="radio" name="size3" id="size-xl-3" value="XL">
+                        <label for="size-xl-3">XL</label>
+                    </div>
+                    <button class="btn-buy" onclick="addToCart('Celana Cargo', 1009000)">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="cart-container" id="cartContainer">
+            <h3>Keranjang Belanja</h3>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Produk</th>
+                        <th>Ukuran</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td id="cart-total">Rp 0</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <div class="purchase-form" id="purchaseForm">
+                <h3>Formulir Pembelian</h3>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" class="form-control" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Alamat Pengiriman</label>
+                        <textarea id="address" class="form-control" rows="4" required></textarea>
+                        <span class="error-message" id="address-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment">Metode Pembayaran</label>
+                        <select id="payment" class="form-control" required>
+                            <option value="">Pilih metode</option>
+                            <option value="transfer">Transfer Bank</option>
+                            <option value="cod">COD (Bayar di Tempat)</option>
+                            <option value="e-wallet">E-Wallet</option>
+                        </select>
+                        <span class="error-message" id="payment-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Proses Pembelian</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Tentang DieeFashion</h4>
+                <p>DieeFashion adalah toko fashion online yang menyediakan pakaian, celana, dan sepatu berkualitas dengan harga terjangkau.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Kontak Kami</h4>
+                <ul class="contact-info">
+                    <li><i data-feather="map-pin"></i> Jl. Fashion No. 123, Panji Anom</li>
+                    <li><i data-feather="phone"></i> (021) 1234-5678</li>
+                    <li><i data-feather="mail"></i> info@dieefashion.com</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Ikuti Kami</h4>
+                <div class="social-media">
+                    <a href="#"><i data-feather="instagram"></i></a>
+                    <a href="#"><i data-feather="facebook"></i></a>
+                    <a href="#"><i data-feather="twitter"></i></a>
+                    <a href="#"><i data-feather="youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 DieeFashion. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../src/js/script.js"></script>
+</body>
+</html>
