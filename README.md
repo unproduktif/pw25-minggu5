@@ -1,7 +1,7 @@
-#NAMA  :DODI WIJAYA
+NAMA  :DODI WIJAYA <br>
 #NIM    :F1D02310047
 
-#Berikut Tampilan Tugas Web Saya
+<br>Berikut Tampilan Tugas Web Saya
 
 ![Image](https://github.com/user-attachments/assets/f8071d5c-7ef1-421a-b5d8-f2a1e0353107)
 
